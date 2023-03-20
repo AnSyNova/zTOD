@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Title>zTOD</Title>
+    <Description>Useful functions for handling z/OS TOD (Time of Day) timestamps</Description>
+    <Authors>Michael Stiemke, AnSyNova GmbH</Authors>
+    <Copyright>Copyright (c) 2023 AnSyNova GmbH</Copyright>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\zTOD.xml</DocumentationFile>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>sn.snk</AssemblyOriginatorKeyFile>
+    <Version>1.0.3</Version>
+    <PackageId>zTOD</PackageId>
+    <PackageProjectUrl>https://github.com/AnsyNova/zTOD</PackageProjectUrl>
+    <PackageTags>z/OS, zos, tod</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>QR_AnSyNova.png</PackageIcon>
+    <PackageReadmeFile>README.MD</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/AnsyNova/zTOD</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <LangVersion>10.0</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFrameworks>net60;net50;net472;net462;netstandard2.0;netstandard2.1</TargetFrameworks>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\QR_AnSyNova.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\LICENSE.TXT">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\README.MD">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+</Project>
