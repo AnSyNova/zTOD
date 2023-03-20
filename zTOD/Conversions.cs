@@ -3,7 +3,7 @@
     public static class Conversions
     {
         /// <summary>
-        /// Convert z/OS timestamps to Unix style timestampe
+        /// Convert z/OS timestamps to Unix timestampe
         /// </summary>
         /// <param name="fourKusecs">The z/OS TOD timestamp as 8 bytes</param>
         /// <param name="leapfourKusecs">The z/OS leap seconds value from CVTLSO</param>
@@ -15,11 +15,11 @@
 
             // UNIX timestamp is microseconds after January 1, 1970 UTC.
 
-            // z/OS keeps a leap second count in CVTLSO and *subtracts* that
-            // from TOD to get UTC
+            // z/OS keeps a leap second count (as clock ticks) in CVTLSO and *subtracts*
+            // that from TOD to get UTC
             fourKusecs -= leapfourKusecs;
 
-            // 4k us from Jan 1, 1900 to Jan 1, 1970, UTC
+            // number of 4k us from Jan 1, 1900 to Jan 1, 1970, UTC (precalculated constant)
             fourKusecs -= 9048018124800000000UL;
 
             // us since January 1, 1970, UTC
