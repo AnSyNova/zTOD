@@ -8,7 +8,7 @@
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\zTOD.xml</DocumentationFile>
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>sn.snk</AssemblyOriginatorKeyFile>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
     <PackageId>zTOD</PackageId>
     <PackageProjectUrl>https://github.com/AnsyNova/zTOD</PackageProjectUrl>
     <PackageTags>z/OS, zos, tod</PackageTags>
